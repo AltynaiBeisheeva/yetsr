@@ -1,6 +1,12 @@
 import psycopg2
 
-conn = psycopg2.connect("dbname = films user = 'altynai' password = '1'")
+conn = psycopg2.connect(
+    database="films",
+    user="postgres",
+    password='1',
+    host='127.0.0.1',
+    port='5432')
+
 cur = conn.cursor()
 while True:
     print('1 - Посмотреть фильмы')
